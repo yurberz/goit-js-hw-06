@@ -2,7 +2,7 @@ import users from "./users.js";
 // ВАРИАНТ Задание-9
 const getNamesSortedByFriendsCount = (users) =>
   [...users]
-    .sort((min, max) => min.friends.length - max.friends.length)
+    .sort(({ friends: min }, { friends: max }) => min.length - max.length)
     .map(({ name }) => name);
 
 console.log(getNamesSortedByFriendsCount(users));
